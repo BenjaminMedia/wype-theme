@@ -1,0 +1,47 @@
+$base-font: GT-Walsheim, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-size-base: 16px;
+$font-weight-base: 500;
+$line-height-base: 1.4;
+$body-color: #111;
+$body-bg: #fff;
+
+// Colors
+
+$sunny-blue: #2e84ef;
+$black: #000;
+$dusty-black: #373737;
+$dusty-gray: #999;
+
+$spacer: 20px;
+
+$link-color: $sunny-blue;
+$link-color-hover: lighten($sunny-blue, 10%);
+
+$blue-100: hsla(213, 95%, 93%, 1);
+$blue-200: hsla(213, 93%, 87%, 1);
+$blue-300: hsla(213, 90%, 80%, 1);
+$blue-400: hsla(213, 88%, 67%, 1);
+$blue-500: hsla(213, 86%, 56%, 1);
+$blue-600: hsla(213, 88%, 46%, 1);
+$blue-700: hsla(213, 90%, 36%, 1);
+$blue-800: hsla(213, 93%, 28%, 1);
+$blue-900: hsla(213, 95%, 17%, 1);
+
+$black-100: lighten($dusty-black, 75%);
+$black-200: lighten($dusty-black, 70%);
+$black-300: lighten($dusty-black, 60%);
+$black-400: lighten($dusty-black, 30%);
+$black-500: $dusty-black;
+$black-600: darken($dusty-black, 30%);
+
+$font-1: 12px;
+$font-2: 14px;
+$font-3: 16px;
+$font-4: 18px;
+$font-5: 20px;
+$font-6: 24px;
+$font-7: 30px;
+$font-8: 36px;
+$font-9: 48px;
+$font-10: 60px;
+$font-11: 72px;

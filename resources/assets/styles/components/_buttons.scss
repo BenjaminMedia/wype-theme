@@ -1,0 +1,102 @@
+$btn-padding-y:               16px !default;
+$btn-padding-x:               28px !default;
+$btn-line-height:             1 !default;
+
+$btn-padding-y-sm:               12px !default;
+$btn-padding-x-sm:               15px !default;
+$btn-line-height-sm:             1 !default;
+
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $line-height, $border-radius) {
+	padding: $padding-y $padding-x;
+	line-height: $line-height;
+	border-radius: $border-radius;
+}
+
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	color: #fff;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	border: 1px solid transparent;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-line-height, 0);
+	transition: all .1s;
+	font-family: $base-font;
+	letter-spacing: 0.02em;
+	min-width: 0;
+	cursor: pointer;
+
+	@include fontSize($font-3);
+	@extend %fw-700;
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:focus,
+	&.focus {
+		// outline: initial;    
+	}
+
+	// Disabled comes first so active can properly restyle
+	&.disabled,
+	&:disabled {
+		opacity: 1;
+	}
+	&:active {
+		// transform: translateY(1px);
+		// transition: none;
+	}
+	&--wide {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	&--narrow {
+		padding-left: $spacer;
+		padding-right: $spacer;
+	}
+	&--block {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+.btn--primary {
+	background-color: $blue-500;
+	&__icon {
+		fill: #fff;
+		width: 1rem;
+		height: 1rem;
+		transition: transform .2s ease;
+	}
+	&:hover {
+		background-color: $blue-600;
+		color: #fff;
+		svg {
+			transform: translateX(5px);
+		}
+	}
+}
+
+.btn--link {
+	color: $black-400;
+	padding: 0;
+	background-color: transparent;
+	border-color: transparent;
+	font-weight: 500;
+	font-size: $font-2;
+	&:hover {
+		color: $black-300;
+	}
+}
+
+.btn--absolute {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+}

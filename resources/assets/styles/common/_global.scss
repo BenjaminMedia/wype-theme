@@ -1,0 +1,365 @@
+.template-form {
+	background-color: $black-500;
+	color: #fff;
+}
+.unscrollable {
+	overflow: hidden;
+}
+%container {
+	margin: 0 auto;
+	padding: 0 $spacer;
+	position: relative;
+	width: 100%;
+}
+.container {
+	max-width: 1340px;
+	@extend %container;
+
+	&--narrow {
+		max-width: 1200px;
+		@extend %container;
+	}
+
+	&--slimmy {
+		max-width: 600px;
+		@extend %container;
+	}
+
+	&--page {
+		max-width: 750px;
+		@extend %container;
+	}
+
+}
+
+.page-content {
+	margin-bottom: $spacer * 4;
+	h2 {
+		@include fontSize($font-7);
+		font-weight: 500;
+		line-height: 1.2;
+		margin: 0 0 $spacer;
+	}
+	p {
+		color: $black-500;
+	}
+}
+
+.section {
+	margin-bottom: $spacer * 2;
+
+	@include md-up {
+		margin-bottom: $spacer * 4;
+	}
+}
+
+body {
+	overflow-x: hidden;
+}
+
+a:focus,
+a:active {
+	outline-color: $blue-500;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+}
+
+h1 {
+	@include fontSize($font-11);
+}
+
+h2 {
+	@include fontSize($font-9);
+}
+
+p {
+	margin: 0 0 $spacer;
+
+	@include fontSize($font-5);
+}
+
+.header-900 {
+	line-height: 0.8;
+	margin-bottom: $spacer;
+
+	@include fontSize(80px);
+
+	@include md-up {
+		@include fontSize(100px);
+	}
+
+	@include lg-up {
+		@include fontSize(140px);
+	}
+}
+
+%header-500,
+.header-500 {
+	margin-bottom: $spacer;
+	line-height: 1;
+
+	@include fontSize($font-8);
+
+	@include md-up {
+		@include fontSize($font-9);
+	}
+}
+
+.label {
+	@include fontSize($font-3);
+}
+
+.icon-grid {
+	display: grid;
+	grid-gap: 30px;
+	grid-template: auto / repeat(auto-fit, minmax(150px, 1fr));
+
+	.grid-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $black-100;
+	}
+}
+
+.logo-grid {
+	display: grid;
+	grid-gap: 30px;
+	grid-template: 250px / repeat(auto-fit, minmax(250px, 1fr));
+
+	.grid-item {
+		@extend %flex-center;
+	}
+}
+
+.grid-item--black {
+	background-color: #000;
+}
+
+.logo {
+	display: inline-block;
+	margin: 0;
+	width: 100px;
+	height: 40px;
+
+	&--white {
+		fill: #fff;
+	}
+}
+
+.icon {
+	max-width: 50px;
+	fill: $sunny-blue;
+}
+
+.color-grid {
+	display: grid;
+	grid-gap: 30px;
+	grid-template: auto / repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.color-item {
+	height: 100px;
+	padding: 10px;
+}
+
+.color-item--blue {
+	&-100 {
+		background-color: $blue-100;
+	}
+
+	&-200 {
+		background-color: $blue-200;
+	}
+
+	&-300 {
+		background-color: $blue-300;
+	}
+
+	&-400 {
+		background-color: $blue-400;
+	}
+
+	&-500 {
+		background-color: $blue-500;
+	}
+
+	&-600 {
+		background-color: $blue-600;
+	}
+
+	&-700 {
+		background-color: $blue-700;
+	}
+
+	&-800 {
+		background-color: $blue-800;
+	}
+
+	&-900 {
+		background-color: $blue-900;
+	}
+}
+
+.color-item--dusty-black {
+	&-100 {
+		background-color: $black-100;
+	}
+
+	&-200 {
+		background-color: $black-200;
+	}
+
+	&-300 {
+		background-color: $black-300;
+	}
+
+	&-400 {
+		background-color: $black-400;
+	}
+
+	&-500 {
+		background-color: $black-500;
+	}
+}
+
+
+
+.deck--black {
+	background-color: #000;
+	color: #fff;
+}
+
+
+.alert {
+	padding: $spacer / 2 $spacer / 2;
+	border: 1px solid transparent;
+	border-radius: 3px;
+
+	p {
+		margin: 0 0 0 0;
+
+		@include fontSize($font-5);
+	}
+
+	span {
+		@extend .fw-700;
+	}
+
+	&--blue {
+		background-color: $blue-100;
+		color: $blue-900;
+		border-color: $blue-200;
+	}
+}
+
+.deck-large-offer {
+	&__header {
+		@extend %font-13;
+
+		margin: 0;
+		line-height: 1.1;
+	}
+}
+
+
+
+// Dine Wype fordele
+.grid-2-cols-a {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -#{$spacer};
+	align-items: flex-start;
+
+	@extend %padding;
+
+	.grid-item {
+		padding: $spacer;
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		@include lg-up {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+}
+
+// 1 month free
+.grid-2-cols-b {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -#{$spacer};
+	align-items: center;
+
+	@extend %padding;
+
+	.grid-item {
+		padding: 0 $spacer;
+		flex: 0 0 auto;
+		max-width: 100%;
+
+		@include md-up {
+			&:nth-child(odd) {
+				flex: 0 0 58.333333%;
+				max-width: 58.333333;
+			}
+
+			&:nth-child(even) {
+				flex: 0 0 41.666667%;
+				max-width: 41.666667%;
+			}
+		}
+	}
+}
+
+
+
+.feature {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -#{$spacer};
+
+	&__item {
+		flex: 0 0 50%;
+		padding: 0 $spacer $spacer;
+	}
+
+	&__icon {
+		width: 23px;
+		height: 23px;
+		fill: $blue-500;
+		margin: 0 0 10px;
+
+		&--sm {
+			width: 21px;
+			height: 21px;
+			margin-top: 2px;
+		}
+
+		&--lg {
+			width: 27px;
+			height: 27px;
+			margin-top: -4px;
+		}
+	}
+
+	&__headline {
+		@include fontSize($font-5);
+
+		color: #fff;
+		margin: 0 0 5px;
+	}
+
+	&__summary {
+		color: $black-300;
+
+		@include fontSize($font-3);
+
+		margin: 0;
+	}
+}

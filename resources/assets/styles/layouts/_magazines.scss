@@ -1,0 +1,125 @@
+.mag {
+	& > .container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__overflow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 -#{$spacer} $spacer;
+		overflow: hidden;
+		padding-bottom: $spacer * 4;
+	}
+
+	&__deck {
+		background-color: $black-100;
+		padding: $spacer * 4 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: nowrap;
+		position: relative;
+		min-width: 1500px;
+		justify-content: center;
+	}
+
+	&__item {
+		flex: 0 0 80px;
+		max-width: 80px;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.4s ease;
+		position: relative;
+
+		@include md-up {
+			flex: 0 0 120px;
+			max-width: 120px;
+		}
+
+		.js & {
+			transform: translateY(20px);
+			opacity: 0;
+		}
+
+		&:nth-child(1) {
+			transform: scale(0.6) translateY($spacer) rotate(-10deg);
+			transition-delay: 0;
+			transform-origin: center right;
+
+			&.isInview {
+				transform: scale(0.7) translateY(0) rotate(-10deg);
+				opacity: 1;
+			}
+		}
+
+		&:nth-child(2) {
+			z-index: 2;
+			transform: scale(0.7) rotate(-5deg);
+			transition-delay: 0.1s;
+			transform-origin: center right;
+
+			&.isInview {
+				transform: scale(0.8) translateY(0) rotate(-5deg);
+				opacity: 1;
+			}
+		}
+
+		&:nth-child(3) {
+			z-index: 3;
+			transition-delay: 0.2s;
+
+			&.isInview {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		&:nth-child(4) {
+			z-index: 2;
+			transform: scale(0.6) rotate(5deg);
+			transition-delay: 0.3s;
+			transform-origin: center left;
+
+			&.isInview {
+				transform: scale(0.8) translateY(0) rotate(5deg);
+				opacity: 1;
+			}
+		}
+
+		&:nth-child(5) {
+			transform: scale(0.6) translateY($spacer) rotate(10deg);
+			transition-delay: 0.4s;
+			transform-origin: center left;
+
+			&.isInview {
+				transform: scale(0.7) translateY(0) rotate(10deg);
+				opacity: 1;
+			}
+		}
+	}
+
+	&__img {
+		box-shadow: 0 10px 40px rgba(black, 0.2);
+		max-width: 200px;
+	}
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__cta {
+		text-align: center;
+		margin-top: $spacer * -3;
+	}
+}

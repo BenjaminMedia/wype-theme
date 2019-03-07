@@ -1,0 +1,166 @@
+
+.top-slider {
+	background-color: $black-100;
+	padding: $spacer * 2 0;
+
+	@include lg-up {
+		padding: $spacer * 4 0;
+	}
+
+	&__arrows-container {
+		position: relative;
+	}
+
+	&__grid {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+
+		@include md-up {
+			flex-direction: row;
+		}
+
+		.grid-item {
+			display: flex;
+			padding: 0 $spacer;
+			width: 100%;
+			
+			@include md-up {
+				&:nth-child(1) {
+					flex: 0 0 33.333333%;
+					max-width: 33.333333%;
+				}
+				&:nth-child(2) {
+					flex: 0 0 66.666667%;
+					max-width: 66.666667%;
+				}
+			}
+			
+			@include lg-up {
+				&:nth-child(1) {
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+				&:nth-child(2) {
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+			}
+		}
+	}
+
+	&__figure {
+		max-width: 140px;
+
+		@include md-up {
+			max-width: 200px;
+		}
+
+		@include lg-up {
+			max-width: 300px;
+		}
+	}
+
+	&__img {
+		box-shadow: 0 0 40px $black-300, 0 0 60px $black-200;
+	}
+
+	&__cover {
+		display: flex;
+		justify-content: center;
+		margin-bottom: $spacer;
+
+		@include md-up {
+			justify-content: center;
+			margin-bottom: 0;
+		}
+
+		@include lg-up {
+			justify-content: flex-end;
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+
+		@include md-up {
+			align-items: flex-start;
+			text-align: left;
+		}
+	}
+
+	&__text-content {
+		max-width: 100%;
+		overflow: hidden;
+	}
+
+	&__header {
+		line-height: 1.1;
+		margin: 0 0 $spacer;
+
+		@include fontSize($font-7);
+
+		@include xs-down {
+			@include fontSize($font-6);
+		}
+
+		@include md-up {
+			@include fontSize($font-9);
+		}
+	}
+
+	&__summary {
+		color: $black-400;
+		margin: 0 0 $spacer;
+
+		@include fontSize($font-5);
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 10;
+		background-color: transparent;
+
+		@include fontSize($font-8);
+
+		border: 0;
+		cursor: pointer;
+		padding: 0 5px;
+		margin: 0;
+		font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+		
+		&--fff {
+			color: #fff;
+		}
+		&--prev {
+			left: -$spacer;
+
+			@include md-up {
+				left: 0;
+			}
+
+			@include lg-up {
+				left: $spacer * 3;
+			}
+		}
+
+		&--next {
+			right: -$spacer;
+
+			@include md-up {
+				right: 0;
+			}
+
+			@include lg-up {
+				right: $spacer * 3;
+			}
+		}
+	}
+}

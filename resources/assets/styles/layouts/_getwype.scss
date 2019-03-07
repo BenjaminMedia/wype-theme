@@ -1,0 +1,102 @@
+.getwype {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -#{$spacer};
+	align-items: flex-start;
+	padding: 100px 0 0 0;
+
+	.grid-item {
+		padding: $spacer;
+		flex: 0 0 100%;
+		max-width: 100%;
+		flex-direction: column;
+		display: flex;
+
+		@include md-up {
+			flex: 0 0 50%;
+			padding: 0 $spacer;
+		}
+	}
+
+	@include md-up {
+		display: flex;
+		align-items: center;
+	}
+
+	&__illu,
+	&__content {
+		text-align: center;
+
+		@include md-up {
+			text-align: initial;
+		}
+	}
+
+	&__figure {
+		@include md-up {
+			display: flex;
+			justify-content: flex-end;
+			padding-right: $spacer * 2;
+		}
+	}
+
+	&__header {
+		@extend %header-500;
+	}
+
+	&__summary {
+		margin: 0 0 $spacer;
+	}
+
+	&__content {
+		@include md-up {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		max-width: 200px;
+	}
+}
+
+.appstore-btn {
+	display: flex;
+	width: 220px;
+	max-width: 220px;
+	align-items: center;
+	background-color: $black-500;
+	padding: 15px;
+	border-radius: 5px;
+	color: $black-100;
+	line-height: 1.2;
+	text-transform: uppercase;
+	transition: box-shadow 0.2s ease;
+
+	@include fontSize($font-1);
+
+	&:hover {
+		color: #fff;
+		box-shadow: 0 0 20px $blue-300;
+	}
+
+	&__icon {
+		flex: 0 0 40px;
+
+		&--apple {
+			fill: #fff;
+			width: 25px;
+			height: 25px;
+		}
+
+		&--google {
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	&__text {
+		flex: auto;
+	}
+}

@@ -1,0 +1,74 @@
+.header {
+	padding: $spacer * 2 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+	
+	@include md-up {
+		flex-wrap: nowrap;
+	}
+
+	&__container {
+		background-color: #fff;
+	}
+
+	&__logo {
+		display: inline-block;
+		width: 90px;
+		height: 25px;
+		margin-top: 2px;
+	}
+
+	&__logo-link {
+		line-height: 0;
+		display: flex;
+	}
+
+	&__menu {
+		order: 3;
+		flex: 0 0 100%;
+
+		@include md-up {
+			order: 0;
+			flex: initial;
+		}
+	}
+}
+
+.promo-header {
+	
+	transition: transform 0.2s cubic-bezier(0.22, 0.35, 0.4, 1.1);
+	background-color: $blue-500;
+	color: #fff;
+
+	@extend %fw-700;
+
+	@include fontSize($font-3);
+
+	padding: $spacer / 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transform: translateY(0);
+
+	&--hidden {
+		transform: translateY(-200%);
+	}
+
+	&__link {
+		color: #fff;
+		transition: color 0.2s;
+
+		&:hover {
+			color: $blue-200;
+		}
+	}
+
+}

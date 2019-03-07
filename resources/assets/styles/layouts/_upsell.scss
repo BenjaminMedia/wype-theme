@@ -1,0 +1,88 @@
+.deck--gray {
+	background-color: $black-500;
+	display: flex;
+	justify-content: center;
+	padding: $spacer * 5 0;
+}
+
+.upsell {
+	max-width: 550px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+
+	&__header {
+		color: #fff;
+
+		@extend %header-500;
+
+		hyphens: auto;
+
+		@include sm-down {
+			@include fontSize($font-7);
+		}
+	}
+
+	&__summary {
+		color: $black-300;
+
+		@include fontSize($font-3);
+	}
+}
+
+.upsell-list {
+	display: flex;
+	max-width: 800px;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 -#{$spacer};
+
+	@include md-up {
+		flex-wrap: nowrap;
+	}
+
+	&__item {
+		flex: auto;
+		display: flex;
+		align-items: center;
+		max-width: 100%;
+		margin: $spacer 0;
+		padding: 0 $spacer;
+		overflow: hidden;
+
+		@include md-up {
+			flex: auto;
+		}
+	}
+
+	&__illu {
+		display: flex;
+		margin-right: 10px;
+		flex: 0 0 60px;
+		height: 50px;
+	}
+
+	&__icon {
+		fill: $blue-500;
+		max-width: 100%;
+		height: auto;
+	}
+
+	&__text {
+		flex: 0 0 calc(100% - 50px);
+		color: $black-100;
+
+		@include fontSize($font-4);
+
+		line-height: 1.1;
+		max-width: 100%;
+	}
+}
+
+.flex-center {
+	justify-content: center;
+	display: flex;
+}

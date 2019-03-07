@@ -1,0 +1,115 @@
+%animation {
+	animation-duration: 0.7s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	// animation-timing-function: cubic-bezier(0.38, 0.29, 0.24, 1.04);
+	animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+.fadeUp {
+	.js & {
+		opacity: 0;
+	}
+
+	&.isInview,
+	.isInview & {
+		animation-name: fadeUp;
+
+		@extend %animation;
+	}
+}
+
+.slideFromLeft {
+	.js & {
+		opacity: 0;
+	}
+
+	&.isInview,
+	.isInview & {
+		animation-name: fadeUp;
+
+		@extend %animation;
+
+		@include md-up {
+			animation-name: slideFromLeft;
+		}
+	}
+}
+
+.slideFromRight {
+	.js & {
+		opacity: 0;
+	}
+
+	&.isInview,
+	.isInview & {
+		animation-name: fadeUp;
+
+		@extend %animation;
+
+		@include md-up {
+			animation-name: slideFromRight;
+		}
+	}
+}
+
+
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY($spacer * 2);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideFromLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-40px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideFromRight {
+	from {
+		opacity: 0;
+		transform: translateX($spacer * 2);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.delay {
+	&-1 {
+		animation-delay: 0.1s;
+	}
+
+	&-2 {
+		animation-delay: 0.2s;
+	}
+
+	&-3 {
+		animation-delay: 0.3s;
+	}
+
+	&-4 {
+		animation-delay: 0.4s;
+	}
+
+	&-5 {
+		animation-delay: 0.5s;
+	}
+}

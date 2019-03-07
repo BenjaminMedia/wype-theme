@@ -1,0 +1,283 @@
+$border-color : rgba(black, .1);
+$color-error: red;
+$color-success: #28a745;
+
+@mixin form-control-focus($color) {
+	&:hover {
+		color: $body-color;
+		border-color: $color;
+		outline: 0;
+		&:before {
+			width: 100%;
+		}
+	}
+	&:focus {
+		color: $body-color;
+		border-color: $color;
+		box-shadow: 0 0 0 2px $color;
+		outline: 0;
+	}
+}
+
+form {
+	position: relative;
+}
+
+.form {
+	&__label {
+		position: relative;
+		cursor: pointer;
+		flex: 0 1 auto;
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 5px;
+		font-size: $font-2;
+		color: $black-300;
+		font-weight: 700;
+	}
+	&__error-message {
+		display: none;
+		color: darken($color-error, 0);
+		font-size: 15px;
+		padding: 5px 0;
+		// background-color: lighten($color-error, 40%);
+
+		.field--error & {
+			display: block;
+		}
+	}
+	&__help {
+		font-size: $font-2;
+		margin: $spacer / 2 0 $spacer;
+		a {
+			color: $black-200;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	&__helpwrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		overflow: auto;
+		padding: $spacer;
+		z-index: 100;
+		display: flex;
+		visibility: hidden;
+		opacity: 0;
+		transition: all .2s ease;
+		background-color: $black-500;
+		&.active {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+
+	&__helpcontent {
+		max-width: 400px;
+		font-size: $font-2;
+		padding: $spacer;
+		background-color: $black-600;
+		transform: translateY(-10%);
+		transition: transform .2s ease;
+		box-shadow: 0 10px 20px rgba(black, .4);
+		.active & {
+			transform: translateY(0);
+		}
+		h2 {
+			font-size: $font-3;
+		}
+		p {
+			font-size: $font-2;
+			margin: 0 0 10px;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	&__helpclose {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		overflow: hidden;
+		&:before,
+		&:after {
+			margin-top: -1px;
+			width: 100%;
+			height: 1px;
+			background-color: $black-400;
+			content: "";
+			top: 50%;
+			position: absolute;
+			left: 0;
+			z-index: 10;
+			display: block;
+			transform-origin: center center;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+		&:hover {
+			&:before,
+			&:after {
+				background-color: #fff;
+			}
+		}
+
+	}
+	&__row {
+		margin-bottom: $spacer / 2;
+		position: relative;
+		&--icon {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 25px;
+			height: 25px;
+			left: 5px;
+			z-index: 10;
+			fill: $black-300;
+		}
+		& + .form__row {
+			margin-top: $spacer;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		position: relative;
+	}
+
+	&__control {
+		font-family: $base-font;
+		color: #222;
+		background-color: #fff;
+		background-clip: padding-box;
+		transition: border-color .2s, box-shadow .2s;
+		border-radius: 0;
+		appearance: none;
+		padding: 1rem .95rem;
+		width: 100%;
+		background-image: none;
+		display: block;
+		position: relative;
+		font-size: $font-4;
+		line-height: 1.25;
+		border: 1px solid $black-200;
+		font-weight: 600;
+
+		// Unstyle the caret on `<select>`s in IE10+.
+		&::-ms-expand {
+			background-color: transparent;
+			border: 0;
+		}
+
+		// Customize the `:focus` state to imitate native WebKit styles.
+		@include form-control-focus($sunny-blue);
+
+		// Placeholder
+		&::placeholder {
+			color: fade-out($body-color, .4);
+			// Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+			opacity: 1;
+			font-size: 17px;
+			letter-spacing: 0;
+		}
+
+		&--has-icon {
+			padding-left: 35px;
+		}
+		.field--error & {
+			border-color: $color-error;
+			box-shadow: 0 0 0 2px fade-out($color-error, .25);
+			color: $color-error;
+			&:focus {
+				color: $color-error;
+				box-shadow: 0 0 0 2px fade-out($color-error, .25);
+			}
+		}
+
+		&--validated {
+			border-color: $color-success !important;
+			padding-right: 2.25rem;
+			background-repeat: no-repeat;
+			background-position: center right calc(2.25rem / 4);
+			background-size: calc(2.25rem / 2) calc(2.25rem / 2);
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+			color: $color-success !important;
+			box-shadow: 0 0 0 2px $color-success !important;
+			outline: 0;
+
+			@include form-control-focus($color-success);
+
+		}
+	}
+	&__error {
+		color: $color-error;
+	}
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+
+.icon-check {
+	width: 100%;
+}
+
+.btn--toggle-password {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	display: flex;
+	align-items: center;
+	color: #333;
+	span {
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+		padding-right: 4px;
+		color: #666;
+	}
+}
+
+.hide-password .field--password--hide {
+	display: none;
+}
+.show-password .field--password--show {
+	display: none;
+}
+.field--password {
+
+	&--hide,
+	&--show {
+		display: flex;
+		align-items: center;
+	}
+	position: relative;
+
+}
+
+.password-icon {
+	fill: #000;
+	width: 25px;
+	height: 25px;
+}

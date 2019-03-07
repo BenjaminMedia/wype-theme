@@ -1,0 +1,66 @@
+
+.footer {
+	padding: $spacer * 4 0;
+	display: flex;
+	margin: 0 -#{$spacer};
+	line-height: 1.54;
+	flex-wrap: wrap;
+
+	&__wide {
+		flex: 0 0 100%;
+		padding: $spacer;
+	}
+
+	&__item {
+		flex: 0 0 50%;
+		padding: 0 $spacer;
+
+		@include md-up {
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
+	}
+
+	p {
+		@include fontSize($font-2);
+	}
+
+	a {
+		color: #fff;
+
+		&:hover {
+			color: $black-300;
+		}
+	}
+
+	&__logo {
+		fill: #fff;
+		height: 25px;
+		width: 89.06px;
+		margin-bottom: $spacer;
+	}
+}
+
+.widget {
+
+	@include fontSize($font-2);
+
+	.menu {
+		list-style: none;
+		flex-direction: column;
+
+		@include fontSize($font-2);
+
+		a {
+			color: #fff;
+
+			&:hover {
+				color: $black-300;
+			}
+		}
+	}
+	&--dark {
+		padding: $spacer 0;
+		color: $black-400;
+	}
+}

@@ -1,0 +1,155 @@
+.hidden-not-home {
+	display: none;
+
+	@include md-up {
+		display: flex;
+	}
+
+	.home & {
+		display: flex;
+	}
+}
+
+@include xs-down {
+	.hidden-xs {
+		display: none;
+	}
+}
+
+@include sm-down {
+	.hidden-sm {
+		display: none;
+	}
+}
+
+.hidden-md-down {
+	@include md-down {
+		display: none;
+	}
+}
+
+.hidden-md-up {
+	@include md-up {
+		display: none;
+	}
+}
+
+.hidden-lg-up {
+	@include lg-up {
+		display: none;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.ml-5 {
+	margin-left: 5px;
+}
+
+.ml-10 {
+	margin-left: 10px;
+}
+
+.mr-5 {
+	margin-right: 5px;
+}
+
+.mr-10 {
+	margin-right: 10px;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+%link {
+	transition: color 0.2s;
+}
+
+%flex {
+	display: flex;
+}
+
+%flex-center {
+	@extend %flex;
+
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.sr-only {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+%pos-a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.hidden {
+	height: 0;
+	overflow: hidden;
+	pointer-events: none;
+	position: absolute;
+	width: 0;
+}
+
+%padding {
+	padding: 50px 0;
+
+	@include md-up {
+		padding: 100px 0;
+	}
+}
+
+%padding--hero {
+	padding: 20px 0 40px;
+
+	@include md-up {
+		padding: 20px 0 60px;
+	}
+}
+
+%object-fit {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-position: center center;
+	object-position: var(--object-position, center center);
+	font-family: "object-fit: cover;"; // polyfill styling
+}
+
+$margins: () !default;
+$margins: map-merge(
+	(
+		"0":    	0,
+		"5":    	5px,
+		"10":    	10px,
+		"20":    	20px,
+		"40":     	40px,
+		"80":     	80px),
+		$margins
+	);
+
+@each $margin, $value in $margins {
+	.mt-#{$margin} {
+		margin-top: $value;
+	}
+
+	.mb-#{$margin} {
+		margin-bottom: $value;
+	}
+}

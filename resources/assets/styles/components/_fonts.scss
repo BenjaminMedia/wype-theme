@@ -1,0 +1,119 @@
+
+@mixin installFont($family, $src, $style: normal, $weight: "normal") {
+	@font-face {
+		font-family: "#{$family}";
+		src:
+			url("#{$src}.woff2") format("woff2"),
+			url("#{$src}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Ultra-Light", "normal",200);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Ultra-Light-Oblique", "italic",200);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Thin", "normal",300);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Thin-Oblique", "italic",300);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Light", "normal",400);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Light-Oblique", "italic",400);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Regular", "normal",500);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Regular-Oblique", "italic",500);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Medium", "normal",600);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Medium-Oblique", "italic",600);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Bold", "normal",700);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Bold-Oblique", "italic",700);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Black", "normal",800);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Black-Oblique", "italic",800);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Ultra-Bold", "normal",900);
+@include installFont("GT-Walsheim", "../fonts/GT-Walsheim-Ultra-Bold-Oblique", "italic",900);
+
+
+
+@mixin font-weight($weight) {
+	font-weight: $weight;
+}
+
+
+.fw-200 {
+	@include font-weight(200);
+}
+
+.fw-300 {
+	@include font-weight(300);
+}
+
+.fw-400 {
+	@include font-weight(400);
+}
+
+.fw-500 {
+	@include font-weight(500);
+}
+
+.fw-600 {
+	@include font-weight(600);
+}
+
+.fw-700 {
+	@include font-weight(700);
+}
+
+.fw-800 {
+	@include font-weight(800);
+}
+
+.fw-900 {
+	@include font-weight(900);
+}
+
+
+$font-weights: () !default;
+$font-weights: map-merge(
+	(
+		100:    	100,
+		200:    	200,
+		300:    	300,
+		400:    	400,
+		500:     	500,
+		600:     	600,
+		700:     	700,
+		800:     	800,
+		900:     	900
+	),
+	$font-weights
+);
+
+@each $font-weight, $value in $font-weights {
+	%fw-#{$font-weight},
+	.fw-#{$font-weight} {
+		font-weight: $value;
+	}
+}
+
+$font-sizes: () !default;
+$font-sizes: map-merge(
+	(
+		1:    	12px,
+		2:    	14px,
+		3:    	16px,
+		4:    	18px,
+		5:     	20px,
+		6:     	24px,
+		7:     	30px,
+		8:     	36px,
+		9:     	48px,
+		10:     60px,
+		11:     72px,
+		12:     84px,
+		13:     96px
+	),
+	$font-sizes
+);
+
+@each $font-size, $value in $font-sizes {
+	%font-#{$font-size},
+	.font-#{$font-size} {
+		font-size: ($value / $font-size-base) + rem;
+	}
+}

@@ -1,0 +1,75 @@
+.menu {
+	display: flex;
+	flex-direction: column;
+	margin-top: 0;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-20px);
+	transition: all 0.2s cubic-bezier(0.22, 0.35, 0.4, 1.1);
+	position: absolute;
+	z-index: 10;
+	top: 80%;
+	right: 0;
+	padding: 10px 20px;
+	border-radius: 3px;
+	box-shadow: 0 2px 10px rgba(black, 0.15);
+	list-style: none;
+	.header__menu & {
+		background: #fff;
+	}
+	@include fontSize($font-5);
+
+	.menu-primary-nav-container & {
+		background-color: #fff;
+	}
+
+	@extend %font-3;
+
+	.show-nav & {
+		display: flex;
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	@include md-up {
+		visibility: initial;
+		opacity: initial;
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		margin: 0;
+		box-shadow: initial;
+		top: initial;
+		right: initial;
+		padding: 0;
+		border-radius: 0;
+		transform: none;
+		@include fontSize($font-3);
+	}
+
+	& > li {
+		@extend %fw-500;
+
+		@include md-up {
+			padding: 0 10px;
+		}
+
+		& > a {
+			@extend %link;
+
+			color: $black-500;
+			padding: 8px 0;
+			display: block;
+
+			&:hover {
+				color: $black-400;
+			}
+
+			@include md-up {
+				padding: 0 5px;
+			}
+		}
+	}
+}
+

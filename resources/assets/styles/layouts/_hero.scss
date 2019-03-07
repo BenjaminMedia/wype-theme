@@ -1,0 +1,73 @@
+.hero {
+	&--center {
+		text-align: center;
+	}
+	@extend %padding--hero;
+	&__header {
+		@extend %header-500;
+	}
+	&__summary {
+		@extend %font-7;
+		@extend %fw-500;
+		line-height: 1.2;
+		margin: 0 0 $spacer;
+		@include md-up {
+			@include fontSize($font-8);
+		}
+		@include lg-up {
+			@include fontSize($font-9);
+		}
+	}
+	&--small {
+		padding-bottom: 0 !important;
+	}
+}
+
+.hero-sm {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 0 $spacer;
+	&__logo {
+		width: 100px;
+		fill: #fff;
+		margin: 0 auto $spacer;
+		height: 24px;
+		margin-bottom: $spacer;
+	}
+	&__h1 {
+		font-size: $font-5;
+		margin: $spacer 0 $spacer;
+	}
+	&__h2 {
+		font-size: $font-3;
+		font-weight: 700;
+		margin-top: $spacer * 2;
+		margin-bottom: $spacer / 2;
+	}
+	&__p {
+		font-size: $font-3;
+		@extend %fw-500;
+		line-height: 1.2;
+		margin: 0 0 $spacer 0;
+	}
+	&__content {
+		flex: 1 0 auto;
+		padding-top: $spacer;
+	}
+	&__footer {
+		font-size: $font-2;
+		color: $black-400;
+		padding: $spacer * 2 0;
+		text-align: center;
+	}
+	&__icon {
+		fill: #fff;
+		max-width: 80px;
+		max-height: 80px;
+		margin: 0 auto;
+	}
+}

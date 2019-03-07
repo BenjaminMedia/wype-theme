@@ -1,0 +1,154 @@
+.bottom-slider {
+	position: relative;
+	background-color: #000;
+
+	@include md-up {
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 50%;
+			z-index: 0;
+		}
+
+		&::before {
+			left: 0;
+			background-color: #000;
+		}
+
+		&::after {
+			right: 0;
+			background-color: $dusty-black;
+		}
+	}
+
+	&__container {
+		display: flex;
+		position: relative;
+		z-index: 1;
+		flex-direction: column;
+		overflow: hidden;
+
+		@include md-up {
+			flex-direction: row;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		padding: $spacer * 2 0 $spacer;
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		@include md-up {
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding: $spacer * 6 0;
+			text-align: left;
+		}
+	}
+
+	&__illu {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		@include md-up {
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding: $spacer * 2 0 0;
+		}
+	}
+
+	&__header {
+		color: #fff;
+
+		@extend %header-500;
+	}
+
+	&__subheader {
+		color: #fff;
+		margin: $spacer 0 $spacer / 2;
+
+		@include fontSize($font-5);
+	}
+
+	&__summary {
+		@include fontSize($font-3);
+
+		max-width: 100%;
+		color: $black-400;
+		margin: 0 0 $spacer / 2;
+
+		@include md-up {
+			max-width: 350px;
+		}
+	}
+
+	&__figure {
+		max-width: 250px;
+	}
+
+	&__left {
+		margin-bottom: $spacer / 2 !important;
+	}
+
+	&__dotscontainer {
+		list-style: none;
+		display: flex !important;
+		margin: 0;
+		padding: 0;
+		z-index: 10;
+		position: relative;
+		justify-content: center;
+
+		@include md-up {
+			justify-content: flex-start;
+		}
+
+		button {
+			border: 0;
+			background: transparent;
+			display: block;
+			outline: none;
+			line-height: 0;
+			font-size: 0;
+			color: transparent;
+			padding: 10px 10px 10px 0;
+			cursor: pointer;
+			position: relative;
+			margin-right: 10px;
+
+			&::before {
+				position: absolute;
+				top: 50%;
+				transform: translate3d(-50%, -50%, 0);
+				left: 50%;
+				content: "";
+				text-align: center;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: #fff;
+				display: block;
+				transition: all 0.2s;
+			}
+		}
+
+		.slick-active {
+			button::before {
+				background-color: $blue-500;
+				width: 6px;
+				height: 6px;
+			}
+		}
+	}
+}
