@@ -1144,112 +1144,112 @@ p {
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Ultra-Light.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Ultra-Light.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Ultra-Light.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Ultra-Light.woff) format("woff");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Ultra-Light-Oblique.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Ultra-Light-Oblique.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Ultra-Light-Oblique.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Ultra-Light-Oblique.woff) format("woff");
   font-weight: 200;
   font-style: italic;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Thin.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Thin.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Thin.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Thin.woff) format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Thin-Oblique.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Thin-Oblique.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Thin-Oblique.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Thin-Oblique.woff) format("woff");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Light.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Light.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Light.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Light.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Light-Oblique.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Light-Oblique.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Light-Oblique.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Light-Oblique.woff) format("woff");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Regular.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Regular.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Regular.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Regular.woff) format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Regular-Oblique.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Regular-Oblique.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Regular-Oblique.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Regular-Oblique.woff) format("woff");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Medium.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Medium.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Medium.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Medium.woff) format("woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Medium-Oblique.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Medium-Oblique.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Medium-Oblique.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Medium-Oblique.woff) format("woff");
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Bold.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Bold.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Bold.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Bold-Oblique.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Bold-Oblique.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Bold-Oblique.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Bold-Oblique.woff) format("woff");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Black.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Black.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Black.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Black.woff) format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Black-Oblique.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Black-Oblique.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Black-Oblique.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Black-Oblique.woff) format("woff");
   font-weight: 800;
   font-style: italic;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Ultra-Bold.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Ultra-Bold.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Ultra-Bold.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Ultra-Bold.woff) format("woff");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT-Walsheim";
-  src: url(/app/themes/wype/dist/fonts/GT-Walsheim-Ultra-Bold-Oblique.woff2) format("woff2"), url(/app/themes/wype/dist/fonts/GT-Walsheim-Ultra-Bold-Oblique.woff) format("woff");
+  src: url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Ultra-Bold-Oblique.woff2) format("woff2"), url(/app/themes/wype-theme/dist/fonts/GT-Walsheim-Ultra-Bold-Oblique.woff) format("woff");
   font-weight: 900;
   font-style: italic;
 }

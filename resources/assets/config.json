@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/app/themes/wype",
+  "publicPath": "/app/themes/wype-theme",
   "devUrl": "http://wype-bedrock.test/",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
