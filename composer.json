@@ -1,5 +1,5 @@
 {
-  "name": "bonnier/wype-theme",
+  "name": "roots/sage",
   "type": "wordpress-theme",
   "license": "MIT",
   "description": "WordPress starter theme with a modern development workflow",
@@ -31,14 +31,10 @@
       "App\\": "app/"
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  },
   "require": {
     "php": ">=7.1",
     "composer/installers": "~1.0",
+    "illuminate/support": "5.6.*",
     "roots/sage-lib": "~9.0.7",
     "soberwp/controller": "~2.1.0",
     "guzzlehttp/guzzle": "^6.3",
@@ -46,13 +42,10 @@
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.8.0",
-    "roots/sage-installer": "~1.6",
-    "johnpbloch/wordpress": "^5.1",
-    "phpunit/phpunit": "^7.5"
+    "roots/sage-installer": "~1.6"
   },
   "scripts": {
     "test": ["phpcs"],
-    "phpunit": "vendor/bin/phpunit",
     "post-create-project-cmd": [
       "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
     ]

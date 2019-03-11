@@ -89,8 +89,3 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
-
-add_filter('sage/template/page/data', function (array $data) {
-    $data['some_data'] = "This is my data";
-    return $data;
-});

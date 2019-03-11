@@ -10,41 +10,22 @@ $easing: cubic-bezier(0.93, 0.01, 0.15, 0.97);
 	margin: 0;
 	color: #8b9095;
 	font-size: 14px;
-	font-family: GT-Walsheim, "Roboto", sans-serif;
 	background-color: $black-500;
 }
 
+.slick-slide {
+	outline: none !important;
+}
 
-.onboard {
-	width: 100%;
-	height: 90%;
-	max-height: 100%;
-	position: relative;
+.onboarding {
+	max-width: 100%;
+	margin: 0 auto;
+	font-family: $base-font;
+	padding-bottom: 40px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	&__logo {
-		flex: 0 0 auto;
-		padding: $spacer 0;
-		background-color: #fff;
-	}
-	&__body {
-		flex: 1 0 auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	&__slider {
-		flex: 0 0 auto;
-		& > div {
-			margin-bottom: 0 !important;
-		}
-	}
+
 	&__nav {
-		flex: 0 0 40px;
-		display: flex;
-		align-items: flex-end;
 		.slick-dots {
 			position: relative;
 			bottom: 0;
@@ -55,7 +36,6 @@ $easing: cubic-bezier(0.93, 0.01, 0.15, 0.97);
 				align-items: center;
 				width: 20px;
 				height: 20px;
-
 			}
 
 			span {
@@ -85,27 +65,31 @@ $easing: cubic-bezier(0.93, 0.01, 0.15, 0.97);
 	}
 }
 
-
-.logo {
-	height: 25px;
-	display: block;
-	width: 100%;
+.new-slide {
+	&__content {
+		font-family: $base-font;
+		&--center {
+			text-align: center;
+			figure {
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				img {
+					display: initial;
+				}
+			}
+		}
+	}
+	&__img {
+		&--sm {
+			max-width: 180px;
+			margin-top: $spacer / 2;
+		}
+		&--lg {
+			max-width: 600px;
+		}
+	}
 }
-
-
-.slick-track {
-	transition: all .5s $easing;
-}
-
-.item {
-	text-align: center;
-	padding: 0 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
 
 .ico {
 	margin: 0 auto $spacer;
@@ -124,10 +108,13 @@ $easing: cubic-bezier(0.93, 0.01, 0.15, 0.97);
 
 .tit {
 	@include fontSize($font-6);
+	font-family: $base-font;
 	color: #fff;
 	margin-bottom: 10px;
 	font-weight: 700;
 	line-height: 1.1;
+	text-align: center;
+	padding: 0 10px;
 	@include xs-down {
 		@include fontSize($font-5);
 	}
@@ -137,39 +124,6 @@ $easing: cubic-bezier(0.93, 0.01, 0.15, 0.97);
 	font-size: 16px;
 	line-height: 1.5;
 	color: $black-300;
+	text-align: center;
+	padding: 0 10px;
 }
-
-
-.empty,
-.slick-slider,
-.onboard__slider {
-	min-width: 0;
-	min-height: 0;
-	max-width: 100%;
-}
-.onboard-slider {
-	&__img {
-		&--sm {
-			max-width: 180px;
-			@include xs-down {
-				max-width: 160px;
-			}
-		}
-	}
-	&__arrows {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: calc(100% - 50px);
-		left: 0;
-		z-index: 99;
-		height: 20px;
-		margin: 0 25px;
-		
-		button {
-			font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
-			@include fontSize($font-8);
-		}
-	}
-}
-

@@ -6,7 +6,7 @@
 
 @section('content_step_1')
 
-    @debug('hierarchy')
+    @debug
 
     <div class="hero-sm  mt-20 mb-0">
         <div class="hero-sm__top">

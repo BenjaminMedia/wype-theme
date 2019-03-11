@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-
 use App\Models\User;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;

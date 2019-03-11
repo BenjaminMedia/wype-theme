@@ -111,14 +111,17 @@
 
 		@include md-up {
 			@include fontSize($font-9);
+			max-width: calc(100% - 100px);
 		}
 	}
 
 	&__summary {
 		color: $black-400;
 		margin: 0 0 $spacer;
-
 		@include fontSize($font-5);
+		@include md-up {
+			max-width: calc(100% - 100px);
+		}
 	}
 
 	&__arrow {

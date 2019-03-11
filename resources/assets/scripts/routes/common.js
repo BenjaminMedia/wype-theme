@@ -12,10 +12,10 @@ export default {
 		arrows: false,
 		dots: true,
 		infinite: false,
-		speed: 100,
+		speed: 500,
 		swipeToSlide: true,
 		touchMove: true,
-		appendDots: '.onboard__nav',
+		appendDots: '.onboarding__nav',
 		focusOnSelect: false,
 		customPaging: function() {
 		return '<a><svg width="100%" height="100%" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.215"></circle></svg><span></span></a>';
@@ -25,10 +25,12 @@ export default {
 	$('.js-navigation-slider').slick({
 		arrows: false,
 		dots: true,
-		infinite: false,
+		infinite: true,
+		speed: 500,
+		swipeToSlide: true,
 		touchMove: true,
 		focusOnSelect: false,
-		appendDots: '.onboard__nav',
+		appendDots: '.onboarding__nav',
 		customPaging: function() {
 		return '<a><svg width="100%" height="100%" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.215"></circle></svg><span></span></a>';
 		},
